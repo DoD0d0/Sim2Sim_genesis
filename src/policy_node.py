@@ -229,8 +229,8 @@ class PolicyNode(Node):
 
         # ---- build obs (NO noise by default; you can add later if needed) ----
         z_used = float(self.base_z) + float(self.base_height_offset)
-        base_height = np.array([z_used], dtype=np.float32)            # (1,)
-        base_lin_vel = self.base_lin_vel.astype(np.float32)                 # (3,)
+        # base_height = np.array([z_used], dtype=np.float32)            # (1,)
+        # base_lin_vel = self.base_lin_vel.astype(np.float32)                 # (3,)
         base_ang_vel = self.base_ang_vel.astype(np.float32)                 # (3,)
         proj_g = self.projected_gravity_from_quat_auto(self.imu_quat)       # (3,)
         vel_cmd = self.cmd.astype(np.float32)                               # (3,)
